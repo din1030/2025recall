@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="description" content="模擬實際罷免選票格式，透過簡單操作，讓你 7/26、8/23 不投錯！">
+	<meta itemprop="name" content="2025 大罷免，大成功">
+	<meta itemprop="description" content="模擬實際罷免選票格式，透過簡單操作，讓你 7/26、8/23 不投錯！">
+
+	<meta property="og:url" content="https://2025recall.gogodin-studio.com/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="2025 大罷免，大成功" />
+	<meta property="og:image" content="https://2025recall.gogodin-studio.com/img/preview.jpg" />
+	<meta property="og:description" content="模擬實際罷免選票格式，透過簡單操作，讓你 7/26、8/23 不投錯！" />
+
+	<title>2025 大罷免，大成功</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="plugins/social-share/jquery-social-share-bar.css">
+	<link rel="stylesheet" href="css/dist/main.css">
+</head>
+
+<body id="2025recall">
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<a class="navbar-brand" href="./index.html">
+			<span class="d-none d-sm-inline">2025</span><span class="d-nonex d-xs-inlinex">立委罷免投票模擬：</span>大罷免，大成功</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+			aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">關於</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md col-lg-5">
+				<section class="vote-section float-md-right1 position-relative">
+					<img class="vote-stamp position-absolute" src="./img/vote-cursor.png">
+					<table class="vote-table table table-bordered ">
+						<tr>
+							<!-- <td>圈選欄</td> -->
+							<!-- <td rowspan="4"></td> -->
+							<td height="160" class="valid agree left-col correct"></td>
+							<td rowspan="2" width="20" class="p-0"></td>
+							<td height="160" class="valid disagree"></td>
+						</tr>
+						<tr>
+							<!-- <td>同意或不同意欄</td> -->
+							<td height="200" class="vertical-rl valid agree correct">
+								<span class="vertical-rl v-option">同意罷免</span>
+							</td>
+							<td height="200" class="vertical-rl valid disagree ">
+								<span class="vertical-rl v-option disagree">不同意罷免</span>
+							</td>
+						</tr>
+						<!-- <tr>
+							<td>編號欄</td>
+							<td colspan="3" class="v-num">10</td>
+						</tr> -->
+						<tr>
+							<!-- <td>主文欄</td> -->
+							<td colspan="3" class="vertical-rl text-left h4">（被罷免人姓名）</td>
+						</tr>
+					</table>
+				</section>
+				<div class="h6 vote-hint float-right text-center w-100">
+					<div class="result-hint d-md-none"></div>
+					請於選票區域圈選。
+					<button class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal"
+						data-target="#noteModal" aria-expanded="false" aria-controls="noteModal">
+						注意事項
+					</button>
+					</p>
+					<div id="noteModal" class="modal fade" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">公投注意事項</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>＊本頁面認定之公投票效力依據<a target="_blank"
+											href="assets/recall.pdf">中選會公告之規定</a>，<strong>若圈選兩處以上仍可判別選項視為有效</strong>。
+									</p>
+									<p>＊投票時使用「非」投票所制式投票圖章、蓋指印、用筆做記號或簽名等，亦屬於<strong>無效票</strong>。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md col-lg-6" style="padding-top: 20px;">
+				<h5 class="text-md-center">
+					第十一屆立法委員罷免案
+				</h5>
+				<div>模擬實際罷免選票格式，透過簡單操作，讓你 7/26、8/23 不投錯！</div>
+				<div class="result border rounded p-3 my-3 h6">
+					<span>罷免票效力認定：</span>
+					<span class="validation mt-3 h6">（尚未投票）</span>
+					<button type="button" name="button" class="btn btn-light btn-reset btn-sm"
+						disabled="disabled">選票重置</button>
+				</div>
+				<div class="result-hint d-none d-md-block"></div>
+				<div>
+					<div class="text-white bg-info mx-auto my-3 p-2 rounded text-center">
+						下架不適任立委，守護國家主權<br>罷免投同意✅台灣需要你
+					</div>
+					<table border="1" style="width: 100%;" class="table-striped mb-3">
+						<thead>
+							<tr>
+								<th>7/26 待罷名單</th>
+								<th>選區</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>林沛祥</td>
+								<td>基隆</td>
+							</tr>
+							<tr>
+								<td>王鴻薇</td>
+								<td>台北市第3選區</td>
+							</tr>
+							<tr>
+								<td>李彥秀</td>
+								<td>台北市第4選區</td>
+							</tr>
+							<tr>
+								<td>羅智強</td>
+								<td>台北市第6選區</td>
+							</tr>
+							<tr>
+								<td>徐巧芯</td>
+								<td>台北市第7選區</td>
+							</tr>
+							<tr>
+								<td>賴士葆</td>
+								<td>台北市第8選區</td>
+							</tr>
+							<tr>
+								<td>洪孟楷</td>
+								<td>新北市第1選區</td>
+							</tr>
+							<tr>
+								<td>葉元之</td>
+								<td>新北市第7選區</td>
+							</tr>
+							<tr>
+								<td>張智倫</td>
+								<td>新北市第8選區</td>
+							</tr>
+							<tr>
+								<td>林德福</td>
+								<td>新北市第9選區</td>
+							</tr>
+							<tr>
+								<td>廖先翔</td>
+								<td>新北市第12選區</td>
+							</tr>
+							<tr>
+								<td>牛煦庭</td>
+								<td>桃園市第1選區</td>
+							</tr>
+							<tr>
+								<td>涂權吉</td>
+								<td>桃園市第2選區</td>
+							</tr>
+							<tr>
+								<td>魯明哲</td>
+								<td>桃園市第3選區</td>
+							</tr>
+							<tr>
+								<td>萬美玲</td>
+								<td>桃園市第4選區</td>
+							</tr>
+							<tr>
+								<td>呂玉玲</td>
+								<td>桃園市第5選區</td>
+							</tr>
+							<tr>
+								<td>邱若華</td>
+								<td>桃園市第6選區</td>
+							</tr>
+							<tr>
+								<td>鄭正鈐</td>
+								<td>新竹市</td>
+							</tr>
+							<tr>
+								<td>廖偉翔</td>
+								<td>台中市第4選區</td>
+							</tr>
+							<tr>
+								<td>黃建豪</td>
+								<td>台中市第5選區</td>
+							</tr>
+							<tr>
+								<td>羅廷瑋</td>
+								<td>台中市第6選區</td>
+							</tr>
+							<tr>
+								<td>丁學忠</td>
+								<td>雲林縣第1選區</td>
+							</tr>
+							<tr>
+								<td>傅崐萁</td>
+								<td>花蓮縣</td>
+							</tr>
+							<tr>
+								<td>黃建賓</td>
+								<td>台東縣</td>
+							</tr>
+						</tbody>
+					</table>
+					<table border="1" style="width: 100%;" class="table-striped mb-3">
+						<thead>
+							<tr>
+								<th>8/23 待罷名單</th>
+								<th>選區</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>馬文君&nbsp;</td>
+								<td>南投縣第1選區</td>
+							</tr>
+							<tr>
+								<td>游顥</td>
+								<td>南投縣第2選區</td>
+							</tr>
+							<tr>
+								<td>羅明才</td>
+								<td>新北市第11選區</td>
+							</tr>
+							<tr>
+								<td>林思銘</td>
+								<td>新竹縣第2選區</td>
+							</tr>
+							<tr>
+								<td>顏寬恒</td>
+								<td>台中市第2選區</td>
+							</tr>
+							<tr>
+								<td>楊瓊瓔</td>
+								<td>台中市第3選區</td>
+							</tr>
+							<tr>
+								<td>江啟臣</td>
+								<td>台中市第8選區</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="plugins/jquery.mobile.custom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script src="plugins/social-share/jquery-social-share-bar.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

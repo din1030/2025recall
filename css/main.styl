@@ -1,0 +1,110 @@
+@media (max-width: 992px)
+	.container
+		width: 100%;
+		max-width: none;
+
+@media (max-width: 330px)
+	.navbar-brand
+		font-size: 1.1rem;
+
+.vertical-rl
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+
+body
+	padding-top: 70px;
+
+@media (max-width: 680px)
+	body
+		padding-bottom: 80px;
+
+	#share-bar
+		opacity: 0.7;
+
+.pager
+	top: 70px;
+	margin: 10px;
+	z-index: 100;
+	opacity: 0.8;
+
+	// &.previous
+	&.next
+		right: 0;
+
+.vote-section
+	width: 100%;
+	padding: 20px 40px;
+	max-width: 300px;
+	margin: 0 auto;
+
+@media (max-width: 440px)
+	.vote-section
+		padding: 0 20px;
+
+// @media (max-width: 375px)
+// .vote-section
+// transform: scale(0.8, 0.8)
+@media (max-width: 320px)
+	.vote-section
+		padding: 0;
+
+.vote-stamp
+	display: none;
+
+.table td, .table th
+	vertical-align: middle;
+
+tr
+	text-align: center;
+
+// td:first-of-type
+// text-align: center;
+// font-size: 1rem;
+// padding: 15px 7px;
+// width: 1.3rem;
+
+// @media (max-width: 320px)
+// td:first-of-type
+// font-size: 0.8rem;
+// .valid
+// height: 200px;
+.v-option
+	letter-spacing: 2px;
+	white-space: nowrap;
+	font-size: 1.2rem;
+
+.vote-focus
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+
+.vote-hint
+	line-height: 1.7rem;
+
+.btn-reset:disabled
+	cursor: not-allowed;
+
+.result-hint p
+	font-size: 1.1rem;
+	line-height: 1.7rem;
+	letter-spacing: 1px;
+
+// ref
+ol.ref-list
+	counter-reset: myCouter;
+	padding-left: 0;
+
+	li
+		list-style: outside none none;
+
+	li::before
+		content: counter(myCouter, decimal);
+		counter-increment: myCouter;
+		background: #2980b9 none repeat scroll 0 0;
+		color: white;
+		display: inline-block;
+		height: 40px;
+		line-height: 40px;
+		margin: 5px 10px;
+		text-align: center;
+		width: 40px;

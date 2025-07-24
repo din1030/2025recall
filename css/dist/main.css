@@ -109,11 +109,14 @@ ol.ref-list li::before {
   height: 200px;
 }
 @media (max-width: 680px) {
+  .vote-section {
+    max-width: 260px;
+  }
   .check {
     height: 16vh;
   }
   .option {
-    height: 22vh;
+    height: 20vh;
   }
   .name {
     height: 24vh;

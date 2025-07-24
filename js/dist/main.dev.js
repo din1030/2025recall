@@ -40,7 +40,7 @@ $(document).ready(function () {
     if (sLeft > leftColRight - 7 && sLeft <= leftColRight) {
       // 中間無法辨認地帶
       $('.validation').text('無效票').addClass('text-danger').removeClass('text-success');
-      var invalid = '<div class="text-danger text-left">您的選票將被視為無效票，請您務必閱讀<a target="_blank" href="assets/vote-validation.pdf">中選會公告之規定</a>。</div>';
+      var invalid = '<div class="text-danger text-left">您的選票將被視為無效票，請您務必閱讀<a target="_blank" href="assets/recall.pdf">中選會公告之規定</a>。</div>';
       $('.result-hint').html(invalid).removeClass('alert alert-success').addClass('alert alert-danger');
       $('.btn-reset').removeAttr('disabled');
       return;
@@ -88,7 +88,7 @@ $(document).ready(function () {
         $('.btn-reset').removeAttr('disabled');
       } else {
         $('.validation').text('無效票').addClass('text-danger').removeClass('text-success');
-        var invalid = '<div class="text-danger text-left">您的選票將被視為無效票，請您務必閱讀<a target="_blank" href="assets/vote-validation.pdf">中選會公告之規定</a>。</div>';
+        var invalid = '<div class="text-danger text-left">您的選票將被視為無效票，請您務必閱讀<a target="_blank" href="assets/recall.pdf">中選會公告之規定</a>。</div>';
         $('.result-hint').html(invalid).removeClass('alert alert-success').addClass('alert alert-danger');
         $('.btn-reset').removeAttr('disabled');
       }
